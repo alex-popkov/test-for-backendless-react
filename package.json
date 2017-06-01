@@ -1,0 +1,17 @@
+{
+  "name": "test-for-backendless-react",
+  "version": "1.0.0",
+  "description": "test job for backendless project based on reactjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Popkov Alexander",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "express": "^4.15.3",
+    "webpack": "^2.6.1",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-hot-middleware": "^2.18.0"
+  }
+}
