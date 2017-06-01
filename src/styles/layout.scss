@@ -1,0 +1,29 @@
+div.layout {
+
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.02);
+    & div.layout--header {
+
+        display: flex;
+        & div.layout--title {
+
+            margin-right: 20px;
+        }
+        & ul.layout--menu {
+
+            display: flex;
+            margin: 0;
+            padding: 0;
+            & li.layout--menu-link {
+
+                margin-right: 10px;
+                list-style-type: none;
+            }
+        }
+    }
+}
