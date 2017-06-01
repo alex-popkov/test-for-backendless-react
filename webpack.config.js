@@ -7,6 +7,7 @@ module.exports = {
     entry: [
 
         'webpack-hot-middleware/client',
+        'babel-polyfill',
         './src/index'
     ],
     output: {
@@ -17,8 +18,34 @@ module.exports = {
     },
     plugins: [
 
-        new webpack.optimize.OccurenceOrderPlugin( ),
+        new webpack.optimize.OccurrenceOrderPlugin( ),
         new webpack.HotModuleReplacementPlugin( ),
-        new webpack.NoErrorsPlugin( )
-    ]
+        new webpack.NoEmitOnErrorsPlugin( )
+    ],
+    module: {
+        
+        rules: [
+            {
+                use: [
+                    {
+                        loader: 'react-hot-loader'
+                    },
+                    {
+                        loader: 'babel-loader',
+                        options: {
+
+                            plugins: ['transform-runtime'],
+                            presets: ["es2015", "stage-0", "react"]
+                        },
+
+                    }
+                ],
+
+                include: [
+                    path.resolve(__dirname, "src")
+                ],
+                test: /\.js$/
+            }
+        ]
+    }
 };
