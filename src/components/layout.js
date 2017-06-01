@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import {injector} from 'react-services-injector';
 import { Link } from 'react-router';
 import style from "../styles/layout.scss";
+import View from './view';
 
 /**
  * Layout component
@@ -22,7 +23,11 @@ class Layout extends Component {
                 <li
                     className = "layout--menu-link"
                     key = {index}>
-                    <Link to = {"/" + item.id.toLowerCase( )}>{item.title}</Link>
+                    <Link
+                        to = {"/" + item.id.toLowerCase( )}
+                        activeClassName='active'>
+                        {item.title}
+                    </Link>
                 </li>
             );
         });
@@ -42,6 +47,7 @@ class Layout extends Component {
                 </div>
                 <div
                     className = "layout--view">
+                    <View data = {this.props.data} />
                 </div>
             </div>;
     }

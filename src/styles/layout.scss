@@ -9,21 +9,45 @@ div.layout {
     background: rgba(0,0,0,0.02);
     & div.layout--header {
 
+        position: fixed;
         display: flex;
+        height: 56px;
+        width: 100%;
+        top: 0;
+        box-sizing: border-box;
+        background: #4285f4;
+        box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+        color: white;
         & div.layout--title {
 
-            margin-right: 20px;
+            margin: 0 20px;
+            line-height: 56px;
         }
         & ul.layout--menu {
 
             display: flex;
-            margin: 0;
+            margin: 0 0 0 20px;
             padding: 0;
             & li.layout--menu-link {
 
                 margin-right: 10px;
                 list-style-type: none;
+                & a {
+
+                    color: white;
+                    text-decoration: none;
+                    cursor: pointer;
+                    line-height: 56px;
+                    &:hover, &.active {
+
+                        color: black;
+                    }
+                }
             }
         }
+    }
+    & div.layout--view {
+
+        margin-top: 100px;
     }
 }
