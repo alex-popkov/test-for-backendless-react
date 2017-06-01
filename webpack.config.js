@@ -23,7 +23,7 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin( )
     ],
     module: {
-        
+
         rules: [
             {
                 use: [

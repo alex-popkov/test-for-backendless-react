@@ -1,10 +1,15 @@
-import React from 'react'
-import { render } from 'react-dom'
-import App from './containers/application'
-import 'babel-polyfill'
-
+import React from 'react';
+import { render } from 'react-dom';
+import Application from './components/application';
+import 'babel-polyfill';
+import { Router, Route, hashHistory } from 'react-router';
 
 render(
-    <App />,
-    document.getElementById('root')
+
+    (
+        <Router history={hashHistory}>
+            <Route path="/" component={Application}/>
+        </Router>
+    ),
+    document.getElementById( 'root')
 );
