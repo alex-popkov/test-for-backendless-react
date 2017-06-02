@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import {injector} from 'react-services-injector';
 import services from '../services';
 import Layout from './layout';
+import View from './view';
 import style from"../styles/application.scss";
 
 injector.register( services );

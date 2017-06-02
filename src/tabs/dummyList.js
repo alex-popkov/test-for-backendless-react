@@ -1,4 +1,5 @@
 import React from 'react';
+import {injector} from 'react-services-injector';
 
 const DummyList = () => (
     <ul>
@@ -11,5 +12,4 @@ const DummyList = () => (
     </ul>
 );
 
-//export default DummyList;
 export default injector.connect( DummyList );

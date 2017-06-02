@@ -33,23 +33,23 @@ class Layout extends Component {
         });
 
         return <div
-                className = "layout">
-                <div
-                    className = "layout--header">
+                    className = "layout">
                     <div
-                        className="layout--title">
-                        Test based on React
+                        className = "layout--header">
+                        <div
+                            className="layout--title">
+                            Test based on React
+                        </div>
+                        <ul
+                            className = "layout--menu">
+                            {menu}
+                        </ul>
                     </div>
-                    <ul
-                        className = "layout--menu">
-                        {menu}
-                    </ul>
-                </div>
-                <div
-                    className = "layout--view">
-                    <View data = {this.props.data} />
-                </div>
-            </div>;
+                    <div
+                        className = "layout--view">
+                        <View data = {this.props.data} />
+                    </div>
+                </div>;
     }
 }
 
