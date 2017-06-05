@@ -3,7 +3,6 @@ import {injector} from 'react-services-injector';
 import dummyChart from '../tabs/dummyChart';
 import dummyList from '../tabs/dummyList';
 import dummyTable from '../tabs/dummyTable';
-import { browserHistory } from 'react-router'
 
 /**
  * View component
@@ -17,30 +16,25 @@ class View extends Component {
 
     render( ){
 
-        var Tab;
+        var Tab = dummyList;
 
-        if( window.location.href.search( /table/g ) ){
+        if( window.location.href.indexOf( 'table' ) > 0 ){
 
-            Tab = new dummyTable( );
+            Tab = dummyTable;
 
-        }else if( window.location.href.search( /list/g ) ){
+        }else if( window.location.href.indexOf( 'list' ) > 0 ){
 
-            Tab = new dummyList( );
-            
-        }else if( window.location.href.search( /chart/g ) ) {
+            Tab = dummyList;
 
-            Tab = new dummyChart( );
+        }else if( window.location.href.indexOf( 'chart' ) > 0 ) {
+
+            Tab = dummyChart;
         }
 
         return <div
                     className = "view">
                     <Tab />
                 </div>
-    }
-
-    componentDidMount( ){
-
-        
     }
 }
 

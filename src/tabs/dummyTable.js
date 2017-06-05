@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import {injector} from 'react-services-injector';
 
-const DummyList = () => (
-    <table><tr><td>Dummy</td><td>Table</td></tr></table>
-);
+/**
+ * Dummy table component
+ */
+class DummyTable extends Component {
 
-export default injector.connect( DummyList );
+    constructor( ){
+
+        super( );
+    }
+
+    render( ){
+
+        return <table><tr><td>Dummy</td><td>Table</td></tr></table>
+    }
+}
+
+export default injector.connect( DummyTable );

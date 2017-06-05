@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import {injector} from 'react-services-injector';
 
-const DummyList = () => (
-    <ul>
-        <li>
-           Dummy
-        </li>
-        <li>
-            List
-        </li>
-    </ul>
-);
+/**
+ * Dummy List component
+ */
+class DummyList extends Component {
+
+    constructor( ){
+
+        super( );
+    }
+
+    render( ){
+
+        return <ul>
+            <li>
+                Dummy
+            </li>
+            <li>
+                List
+            </li>
+        </ul>
+    }
+}
 
 export default injector.connect( DummyList );
